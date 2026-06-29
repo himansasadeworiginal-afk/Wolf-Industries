@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wolf Industries — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: #0b1326; color: #dae2fd; min-height: 100vh; overflow-x: hidden; }
+  body::before { content:''; position:fixed; inset:0; background: radial-gradient(ellipse at 30% 20%, rgba(184,255,0,0.04) 0%, transparent 50%), radial-gradient(ellipse at 70% 80%, rgba(0,212,255,0.03) 0%, transparent 50%); pointer-events:none; z-index:0; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 1; }
+
+  header { padding: 3rem 0 2rem; text-align: center; }
+  .logo { font-size: 2.5rem; font-weight: 900; letter-spacing: -0.03em; background: linear-gradient(135deg, #b8ff00, #00d4ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem; }
+  .tagline { font-size: 1rem; color: #8888a0; margin-bottom: 0.5rem; }
+  .badge { display: inline-block; padding: 0.3rem 1rem; background: rgba(184,255,0,0.1); border: 1px solid rgba(184,255,0,0.2); border-radius: 100px; font-size: 0.7rem; font-weight: 700; color: #b8ff00; }
+
+  .projects { padding: 2rem 0; }
+  .projects h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 1.5rem; color: #8888a0; text-transform: uppercase; letter-spacing: 0.1em; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.5rem; }
+
+  .card { background: rgba(23, 31, 51, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; overflow: hidden; transition: all 0.4s cubic-bezier(0.4,0,0.2,1); }
+  .card:hover { border-color: rgba(184,255,0,0.3); transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,0,0,0.4); }
+  .card-preview { height: 200px; display: flex; align-items: center; justify-content: center; font-size: 4rem; position: relative; }
+  .card-preview.saas { background: linear-gradient(135deg, #1e1b4b, #312e81); }
+  .card-preview.ecom { background: linear-gradient(135deg, #064e3b, #065f46); }
+  .card-preview.ai { background: linear-gradient(135deg, #2e1065, #4c1d95); }
+  .card-num { position: absolute; top: 1rem; left: 1rem; width: 32px; height: 32px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 800; }
+  .card-body { padding: 1.5rem; }
+  .card-body h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .card-body p { font-size: 0.8rem; color: #8888a0; line-height: 1.5; margin-bottom: 1rem; }
+  .tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1rem; }
+  .tag { padding: 0.2rem 0.6rem; background: rgba(255,255,255,0.05); border-radius: 4px; font-size: 0.65rem; font-weight: 600; color: #8888a0; }
+  .btn { display: inline-block; padding: 0.6rem 1.5rem; background: linear-gradient(135deg, #b8ff00, #00ff88); color: #0b1326; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.85rem; transition: all 0.3s; }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(184,255,0,0.3); }
+
+  .about { padding: 3rem 0; text-align: center; }
+  .about h2 { font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem; }
+  .about p { font-size: 0.9rem; color: #8888a0; max-width: 600px; margin: 0 auto 2rem; line-height: 1.6; }
+  .skills { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem; }
+  .skill { padding: 0.5rem 1rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; font-size: 0.8rem; font-weight: 600; }
+
+  footer { padding: 2rem 0 3rem; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); }
+  footer p { font-size: 0.75rem; color: #8888a0; }
+
+  @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } .logo { font-size: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <div class="logo">WOLF INDUSTRIES</div>
+    <p class="tagline">Premium Freelance Web Development — Colombo, Sri Lanka</p>
+    <div class="badge">AVAILABLE FOR HIRE</div>
+  </header>
+
+  <section class="projects">
+    <h2>Portfolio</h2>
+    <div class="grid">
+
+      <div class="card">
+        <div class="card-preview saas"><div class="card-num">01</div></div>
+        <div class="card-body">
+          <h3>FlowMetrics — SaaS Landing Page</h3>
+          <p>Dark-themed analytics SaaS landing page with hero section, dashboard preview, stats grid, pricing tiers, and FAQ. Fully responsive.</p>
+          <div class="tags"><span class="tag">HTML/CSS</span><span class="tag">Responsive</span><span class="tag">Modern UI</span></div>
+          <a class="btn" href="portfolio/project-1-saas-landing/index.html" target="_blank">View Project</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-preview ecom"><div class="card-num">02</div></div>
+        <div class="card-body">
+          <h3>ShopVault — E-commerce UI</h3>
+          <p>Full e-commerce interface with product grid, working cart drawer, quantity controls, filters, and responsive design. Interactive JavaScript.</p>
+          <div class="tags"><span class="tag">JavaScript</span><span class="tag">Cart System</span><span class="tag">Interactive</span></div>
+          <a class="btn" href="portfolio/project-2-ecommerce-ui/index.html" target="_blank">View Project</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-preview ai"><div class="card-num">03</div></div>
+        <div class="card-body">
+          <h3>WolfChat — AI Chatbot Dashboard</h3>
+          <p>AI chatbot dashboard with sidebar navigation, chat interface, typing indicators, and message sending. Shows AI integration capabilities.</p>
+          <div class="tags"><span class="tag">Chat UI</span><span class="tag">Animations</span><span class="tag">Dashboard</span></div>
+          <a class="btn" href="portfolio/project-3-ai-chatbot/index.html" target="_blank">View Project</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>What I Build</h2>
+    <p>I help small businesses and startups turn website visitors into paying customers. Not with fancy animations or 12-page sites — with fast, focused, conversion-optimized websites that actually sell.</p>
+    <div class="skills">
+      <span class="skill">Interactive Websites</span>
+      <span class="skill">Web UI Development</span>
+      <span class="skill">AI Integration</span>
+      <span class="skill">Motion Design</span>
+      <span class="skill">Performance Optimization</span>
+    </div>
+    <a class="btn" href="mailto:hello@wolfindustries.dev">Get In Touch</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Wolf Industries — H. Sadew, Colombo, Sri Lanka</p>
+    <p style="margin-top:0.5rem">Pricing: $50 / $100 / $200 per project</p>
+  </footer>
+
+</div>
+</body>
+</html>
